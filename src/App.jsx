@@ -1,4 +1,7 @@
-import { useState } from "react"
+import { useState } from "react";
+import { auth } from "./firebase-config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 
 function App() {
 
@@ -9,7 +12,8 @@ function App() {
 
   const addUser = async () => {
 
-      alert(userEmail + " " + userPassword);
+    const userData = await createUserWithEmailAndPassword(auth, userEmail, userPassword);
+    console.log(userData);
 
   }
  
