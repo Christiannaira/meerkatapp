@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCn7--NFZ2Hxz6dLHxHa8mUnEUPz4QVhsI",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "meerkatapp-47830.firebaseapp.com",
   projectId: "meerkatapp-47830",
   storageBucket: "meerkatapp-47830.firebasestorage.app",
@@ -12,6 +12,6 @@ const firebaseConfig = {
   measurementId: "G-T3DXRKQXSH"
 };
 
-
+x
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
